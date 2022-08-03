@@ -1,5 +1,7 @@
-Vue.component('listar-productos-vuex', {
-    template: //html
+// 
+Vue.component('listar-productos-vuex', {//nombro al componente  listar-productos-vuex
+  //si te bajas esta extencion "es6-string-html" el html q sigue lo vas a ver mejor
+    template: //html 
     `
   <v-card>
     <v-card-title>
@@ -26,7 +28,7 @@ Vue.component('listar-productos-vuex', {
 
         
     },
-    created: function(){
+    created: function(){// llamo a la funcionn para qw se muestre cuando arranca
         this.consultarProductos();
 
     },
@@ -35,7 +37,7 @@ Vue.component('listar-productos-vuex', {
             fetch('https://desayunoplaceres.com.ar/apiPepu/apiSandala.php')
             .then(respuesta=>respuesta.json())//en caso de que llege respuesta
             .then((datosRespuesta)=>{
-                //console.log(datosRespuesta);
+                console.log(datosRespuesta);
                 store.state.productos=[]
                 if(typeof datosRespuesta[0].success==='undefined')
                 {
@@ -44,10 +46,7 @@ Vue.component('listar-productos-vuex', {
                 for(let i in store.state.productos[0]) {
                   store.state.indices.push({text:i, value:i,});
                     
-                    //console.log(this.productos[i]); // value against the key
                   }
-                  //console.log(store.state.indices); // key
-                //console.log(Object.Keys(this.productos));
             })// la forma en la que vamos a mostrar la info
             .catch(console.log)
             },
