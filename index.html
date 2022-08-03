@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+  <title>Index Vuetify</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- solo para vue muestro menu-->
+    <v-app>
+      <menuVuetify></menuVuetify>
+      <v-main>
+        <v-container>
+          <v-row>
+            <v-col cols="3">
+              
+            </v-col>
+            <v-col>
+              <listar-productos-vuex></listar-productos-vuex>
+            </v-col>
+          </v-row>
+
+          
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+  <!-- dsps de vue-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <script src="componentes/listarDatosProductos.js"></script>
+  <script src="componentes/listarDatosProductosVuex.js"></script>
+  <script src="componentes/menuVuetify.js"></script>
+  <script src="js/a.js"></script>
+</body>
+
+</html>
